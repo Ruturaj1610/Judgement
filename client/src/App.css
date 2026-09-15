@@ -1,0 +1,20 @@
+.app-root {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-primary);
+}
+
+.connection-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--accent-crimson);
+  color: #ffffff;
+  padding: 6px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  z-index: 100;
+}

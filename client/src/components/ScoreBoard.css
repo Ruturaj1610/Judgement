@@ -1,0 +1,88 @@
+.scoreboard-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 35;
+  background: rgba(10, 13, 18, 0.65);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 16px;
+  border-radius: inherit;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.scoreboard-box {
+  width: 100%;
+  max-width: 580px;
+  max-height: calc(100% - 32px);
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: floatIn 0.3s ease-out forwards;
+  margin: auto;
+}
+
+.scoreboard-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--accent-gold);
+  letter-spacing: 1px;
+}
+
+.scoreboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+}
+
+.scoreboard-table th,
+.scoreboard-table td {
+  padding: 10px 14px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.scoreboard-table th {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.scoreboard-table td {
+  font-size: 0.95rem;
+}
+
+.scoreboard-table tr.my-row {
+  background: rgba(245, 197, 66, 0.08);
+}
+
+.score-success {
+  color: var(--accent-emerald);
+  font-weight: 700;
+}
+
+.score-fail {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.total-score-badge {
+  color: var(--accent-gold);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.next-round-btn-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}

@@ -1,0 +1,86 @@
+.player-hand-container {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20;
+  max-width: 95vw;
+}
+
+.hand-turn-banner {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 16px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.hand-turn-banner.is-my-turn {
+  background: linear-gradient(135deg, rgba(245, 197, 66, 0.25), rgba(212, 175, 55, 0.4));
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  box-shadow: 0 0 16px var(--accent-gold-glow);
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+.hand-cards-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px 16px;
+}
+
+.hand-card-wrapper {
+  margin: 0 -8px;
+  transition: margin 0.2s ease, transform 0.2s ease;
+}
+
+.hand-card-wrapper:hover {
+  z-index: 15;
+  margin: 0 4px;
+}
+
+.hand-stats-bar {
+  display: flex;
+  gap: 16px;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.stat-pill {
+  background: rgba(18, 24, 36, 0.8);
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-pill strong {
+  color: var(--text-primary);
+  margin-left: 4px;
+}
+
+@media (max-width: 768px) {
+  .player-hand-container {
+    bottom: 6px;
+  }
+  .hand-card-wrapper {
+    margin: 0 -12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hand-card-wrapper {
+    margin: 0 -16px;
+  }
+}
