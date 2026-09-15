@@ -11,6 +11,7 @@
   width: 100%;
   padding: 0 4px;
   box-sizing: border-box;
+  overflow: visible;
 }
 
 .hand-turn-banner {
@@ -41,11 +42,13 @@
   justify-content: center;
   align-items: flex-end;
   padding: 10px 16px;
+  flex-wrap: nowrap;
 }
 
 .hand-card-wrapper {
   margin: 0 -8px;
   transition: margin 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
 }
 
 .hand-card-wrapper:hover {
@@ -78,7 +81,11 @@
     bottom: max(6px, env(safe-area-inset-bottom, 6px));
   }
   .hand-card-wrapper {
-    margin: 0 -12px;
+    margin: 0 -8px;
+    flex-shrink: 0;
+  }
+  .hand-card-wrapper:hover {
+    margin: 0 1px;
   }
   .hand-turn-banner {
     font-size: 0.78rem;
@@ -97,7 +104,10 @@
 
 @media (max-width: 480px) {
   .hand-card-wrapper {
-    margin: 0 -16px;
+    margin: 0 -6px;
+  }
+  .hand-card-wrapper:hover {
+    margin: 0 -2px;
   }
   .hand-cards-row {
     padding: 6px 8px;
@@ -109,7 +119,10 @@
     bottom: max(4px, env(safe-area-inset-bottom, 4px));
   }
   .hand-card-wrapper {
-    margin: 0 -18px;
+    margin: 0 -6px;
+  }
+  .hand-card-wrapper:hover {
+    margin: 0 -2px;
   }
   .hand-cards-row {
     padding: 4px 4px;
@@ -134,7 +147,10 @@
 
 @media (max-width: 360px) {
   .hand-card-wrapper {
-    margin: 0 -20px;
+    margin: 0 -6px;
+  }
+  .hand-card-wrapper:hover {
+    margin: 0 -2px;
   }
   .hand-cards-row {
     padding: 2px 2px;
