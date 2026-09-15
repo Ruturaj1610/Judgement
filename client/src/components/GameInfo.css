@@ -114,3 +114,57 @@
     display: none;
   }
 }
+
+@media (max-width: 430px) {
+  .game-info-bar {
+    top: 4px;
+    padding: 5px 8px;
+    gap: 4px;
+  }
+  .info-left-group {
+    gap: 6px;
+  }
+  .info-right-group {
+    gap: 6px;
+  }
+  .room-code-tag {
+    font-size: 0.72rem;
+    padding: 3px 7px;
+    gap: 4px;
+  }
+  .hukum-display-badge {
+    padding: 3px 7px;
+    gap: 4px;
+  }
+  /* Show only the suit symbol on very small phones, hide verbose label */
+  .hukum-label {
+    display: none;
+  }
+  .hukum-symbol {
+    font-size: 1.2rem;
+  }
+  .round-counter-pill {
+    font-size: 0.75rem;
+  }
+  .sound-btn {
+    font-size: 1rem;
+  }
+  .htp-bar-help-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .game-info-bar {
+    padding: 4px 6px;
+  }
+  .room-code-tag {
+    font-size: 0.65rem;
+    padding: 2px 5px;
+  }
+  .hukum-symbol {
+    font-size: 1.05rem;
+  }
+}

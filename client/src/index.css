@@ -47,6 +47,14 @@
   }
 }
 
+@media (max-width: 360px) {
+  :root {
+    --card-width: 46px;
+    --card-height: 68px;
+    --card-radius: 5px;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -54,11 +62,18 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  /* Respect iOS notch / home-bar insets */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  min-height: 100vh;
+  /* Use dynamic viewport height where supported (avoids iOS chrome overlap) */
+  min-height: 100dvh;
+  min-height: 100vh; /* fallback */
   overflow-x: hidden;
   user-select: none;
   -webkit-user-select: none;

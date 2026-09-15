@@ -85,3 +85,56 @@
   color: var(--text-muted);
   font-size: 0.85rem;
 }
+
+@media (max-width: 768px) {
+  .play-area-container {
+    top: 45%;
+  }
+  .played-cards-grid {
+    gap: 8px;
+    min-height: 100px;
+    flex-wrap: wrap;
+    max-width: 92vw;
+  }
+  .trick-info-banner {
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+  .played-by-name {
+    font-size: 0.65rem;
+    padding: 1px 5px;
+    margin-top: 4px;
+  }
+  .trick-winner-announcement {
+    font-size: 0.88rem;
+    padding: 5px 14px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .play-area-container {
+    top: 43%;
+  }
+  .played-cards-grid {
+    gap: 5px;
+    min-height: 84px;
+  }
+  .trick-info-banner {
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    margin-bottom: 6px;
+  }
+  .empty-trick-placeholder {
+    padding: 14px 20px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .played-cards-grid {
+    gap: 3px;
+  }
+}

@@ -2,6 +2,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+  height: 100dvh; /* modern browsers: excludes browser chrome on mobile */
   overflow: hidden;
   background: var(--bg-primary);
   display: flex;
@@ -37,7 +38,11 @@
   .table-felt-surface {
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     border-radius: 0;
     border: none;
+  }
+  .table-felt-inner-ring {
+    display: none; /* remove decorative ring on mobile to save space */
   }
 }

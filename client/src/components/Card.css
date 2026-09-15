@@ -118,3 +118,43 @@
     font-size: 1.6rem;
   }
 }
+
+@media (max-width: 768px) {
+  /* Reduce hover lift on touch devices so card stays in viewport */
+  .playing-card.is-playable:hover {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+@media (max-width: 430px) {
+  .playing-card {
+    padding: 4px;
+  }
+  .card-rank {
+    font-size: 0.68rem;
+  }
+  .card-suit-small {
+    font-size: 0.62rem;
+  }
+  .card-suit-large {
+    font-size: 1.3rem;
+  }
+  .playing-card.is-playable:hover {
+    transform: translateY(-8px) scale(1.04);
+  }
+}
+
+@media (max-width: 360px) {
+  .playing-card {
+    padding: 3px;
+  }
+  .card-rank {
+    font-size: 0.6rem;
+  }
+  .card-suit-small {
+    font-size: 0.55rem;
+  }
+  .card-suit-large {
+    font-size: 1.1rem;
+  }
+}
