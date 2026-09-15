@@ -12,5 +12,6 @@
       "@judgement/shared": ["../shared/dist/index"]
     }
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["src/testBot.ts"]
 }
